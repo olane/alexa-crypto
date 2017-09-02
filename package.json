@@ -1,0 +1,22 @@
+{
+  "name": "alexa-crypto",
+  "version": "0.1.0",
+  "description": "Alexa skill for retrieving cryptocurrency prices and information",
+  "main": "index.js",
+  "dependencies": {
+    "cryptocompare": "~0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olane/alexa-crypto.git"
+  },
+  "author": "olane",
+  "bugs": {
+    "url": "https://github.com/olane/alexa-crypto/issues"
+  },
+  "homepage": "https://github.com/olane/alexa-crypto#readme"
+}
