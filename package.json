@@ -4,11 +4,17 @@
   "description": "Alexa skill for retrieving cryptocurrency prices and information",
   "main": "index.js",
   "dependencies": {
-    "cryptocompare": "~0.1.0"
+    "cryptocompare": "~0.1.0",
+    "lodash": "^4.17.4",
+    "node-fetch": "^1.7.2",
+    "promise": "^8.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
