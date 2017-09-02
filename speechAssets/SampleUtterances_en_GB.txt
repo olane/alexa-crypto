@@ -1,0 +1,4 @@
+GetPriceIntent what's the price of {CurrencyFrom}
+GetPriceIntent what's the value of {CurrencyFrom}
+GetPriceIntent what the price of {CurrencyFrom} is
+GetPriceIntent what the value of {CurrencyFrom} is

@@ -1,0 +1,14 @@
+{"intents": [
+    {
+        "intent": "GetPriceIntent", 
+        "slots": [
+            {"name" : "Currency", "type": "CURRENCY_NAME"},
+            {"name" : "CurrencyTo", "type": "CURRENCY_NAME"}
+        ]
+    },
+    {"intent": "AMAZON.RepeatIntent"},
+    {"intent": "AMAZON.HelpIntent"},
+    {"intent": "AMAZON.StopIntent"},
+    {"intent": "AMAZON.CancelIntent"}
+  ]
+}

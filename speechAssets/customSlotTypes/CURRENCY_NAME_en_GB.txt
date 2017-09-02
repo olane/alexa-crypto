@@ -1,0 +1,6 @@
+bitcoin
+ethereum
+ether
+U.S. dollars
+Euros
+G.B.P.
