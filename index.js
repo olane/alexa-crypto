@@ -2,6 +2,7 @@
 
 const Alexa = require('alexa-sdk');
 const cryptoPrices = require('./crypto-prices');
+const currencies = require('./currencies');
 
 const APP_ID = undefined; // TODO replace
 
@@ -9,12 +10,8 @@ function generateHint(){
     return 'Try asking for the price of Bitcoin.';
 }
 
-function getCurrencySymbol(currencyInput) {
-    return 'BTC';
-}
-
 function getPriceSummarySpeech(currencyFrom, currencyTo, price){
-    return 'The price of ' + currencyFrom + ' right now is ' + price + ' ' + currencyTo;
+    return 'The price of ' + currencyFrom.speechName + ' right now is ' + price + ' ' + currencyTo.speechName;
 }
 
 const handlers = {
@@ -26,16 +23,14 @@ const handlers = {
     },
     'GetPriceIntent': function () {
         const currencyFromSlot = this.event.request.intent.slots.CurrencyFrom;
-        let currencyFrom;
-        if (currencyFromSlot && currencyFromSlot.value) {
-            currencyFrom = currencyFrom.value.toLowerCase();
-        }
+        let currencyFromInput = currencyFromSlot && currencyFromSlot.value;
 
-        let currencyFromSymbol = getCurrencySymbol(currencyFrom);
+        let currencyFrom = currencies.getCurrencyByName(currencyFromInput);
+        let currencyTo = currencies.getCurrencyByName('USD');
 
-        let price = cryptoPrices.getPrice(currencyFromSymbol, 'USD');
+        let price = cryptoPrices.getPrice(currencyFrom.symbol, currencyTo.symbol);
 
-        let priceOutput = getPriceSummarySpeech(currencyFrom, 'USD');
+        let priceOutput = getPriceSummarySpeech(currencyFrom, currencyTo);
 
         this.emit(':tell', priceOutput);
     },
