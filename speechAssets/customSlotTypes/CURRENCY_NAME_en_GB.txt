@@ -1,6 +1,11 @@
 bitcoin
+BTC
 ethereum
 ether
+ETH
 U.S. dollars
+dollars
 Euros
 G.B.P.
+pounds
+British pounds

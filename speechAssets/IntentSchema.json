@@ -2,7 +2,7 @@
     {
         "intent": "GetPriceIntent", 
         "slots": [
-            {"name" : "Currency", "type": "CURRENCY_NAME"},
+            {"name" : "CurrencyFrom", "type": "CURRENCY_NAME"},
             {"name" : "CurrencyTo", "type": "CURRENCY_NAME"}
         ]
     },
